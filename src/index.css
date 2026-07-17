@@ -1,37 +1,39 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
 @import "tailwindcss";
 
 @theme {
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
   
-  --color-primary: #0066cc;
-  --color-primary-hover: #0071e3;
-  --color-canvas-parchment: #f5f5f7;
-  --color-ink: #1d1d1f;
+  --color-hanwha-orange: #f37321;
+  --color-hanwha-dark: #111111;
+  --color-hanwha-gray-900: #1a1a1a;
+  --color-hanwha-gray-800: #222222;
+  --color-hanwha-gray-700: #333333;
+  --color-hanwha-gray-400: #767676;
 }
 
 @layer base {
   body {
-    @apply font-sans text-[17px] text-[#1d1d1f] bg-[#F8FAFC] antialiased leading-[1.47] tracking-[-0.022em];
+    @apply font-sans text-[15px] text-[#222222] bg-[#FFFFFF] antialiased leading-relaxed;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-semibold tracking-[-0.03em];
+    @apply font-bold tracking-tight text-hanwha-dark;
   }
 }
 
 @layer utilities {
-  .apple-tight {
-    letter-spacing: -0.03em;
+  .hanwha-shadow {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   }
   
-  .glass-frosted {
-    @apply bg-white/80 backdrop-blur-xl;
+  .hanwha-button-active {
+    @apply active:scale-[0.98] transition-transform duration-150;
   }
 
-  .button-active-scale {
-    @apply active:scale-95 transition-transform duration-200;
+  .hanwha-border {
+    @apply border-[#e5e5e5];
   }
 }
 

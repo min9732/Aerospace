@@ -21,40 +21,37 @@ export function Layout() {
   };
 
   return (
-    <div className="flex h-screen bg-[#F8FAFC] overflow-hidden font-sans text-[#1d1d1f]">
+    <div className="flex h-screen bg-white overflow-hidden font-sans text-hanwha-dark">
       <Sidebar activeView={activeView} setActiveView={setActiveView} />
       
       <div className="flex-1 flex flex-col overflow-hidden">
-        {/* Top Navigation Bar */}
-        <nav className="h-16 bg-white border-b border-slate-200 flex items-center justify-between px-8 shrink-0 shadow-sm z-10">
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-[#0066cc] rounded-lg flex items-center justify-center text-white font-bold italic text-xl shadow-lg shadow-blue-200">A</div>
-            <div>
-              <h1 className="text-lg font-bold tracking-tight text-slate-900 leading-tight">ADIS <span className="font-normal text-slate-400 hidden sm:inline">| Aero-Design Intelligence Suite</span></h1>
-              <p className="text-[10px] uppercase tracking-widest text-[#0066cc] font-bold">Engineering Automation System</p>
-            </div>
+        {/* Top Header */}
+        <nav className="h-16 bg-white border-b border-[#e5e5e5] flex items-center justify-between px-8 shrink-0 z-10">
+          <div className="flex items-center gap-6">
+            <h1 className="text-[14px] font-bold tracking-widest text-hanwha-dark uppercase">
+              Engineering Automation <span className="text-hanwha-orange ml-1">Suite</span>
+            </h1>
           </div>
           
-          <div className="flex items-center gap-6">
-            <div className="hidden lg:flex items-center gap-2 px-3 py-1.5 bg-green-50 border border-green-200 rounded-full">
-              <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-              <span className="text-[11px] font-bold text-green-700 uppercase tracking-tight">CATIA V6 Connected</span>
+          <div className="flex items-center gap-8">
+            <div className="flex items-center gap-1 text-hanwha-gray-400">
+              <span className="text-[11px] font-bold uppercase tracking-widest">Aero-System Live</span>
             </div>
             
-            <div className="w-px h-6 bg-slate-200"></div>
+            <div className="w-px h-4 bg-[#e5e5e5]"></div>
             
-            <div className="flex items-center gap-4">
-              <button className="text-[13px] font-semibold text-slate-500 hover:text-[#0066cc] transition-colors button-active-scale">Settings</button>
-              <button className="text-[13px] font-semibold text-slate-500 hover:text-[#0066cc] transition-colors button-active-scale">User Guide</button>
-              <div className="w-8 h-8 bg-slate-100 rounded-full flex items-center justify-center border border-slate-200 shadow-sm overflow-hidden group cursor-pointer button-active-scale">
-                <User className="w-4 h-4 text-slate-400 group-hover:text-[#0066cc] transition-colors" />
+            <div className="flex items-center gap-6">
+              <button className="text-[12px] font-bold text-hanwha-gray-400 hover:text-hanwha-orange transition-colors uppercase tracking-widest hanwha-button-active">Docs</button>
+              <button className="text-[12px] font-bold text-hanwha-gray-400 hover:text-hanwha-orange transition-colors uppercase tracking-widest hanwha-button-active">Support</button>
+              <div className="w-8 h-8 bg-hanwha-dark rounded-full flex items-center justify-center group cursor-pointer hanwha-button-active">
+                <User className="w-4 h-4 text-white group-hover:text-hanwha-orange transition-colors" />
               </div>
             </div>
           </div>
         </nav>
 
         {/* Main Content Area */}
-        <main className="flex-1 overflow-y-auto bg-[#F8FAFC]">
+        <main className="flex-1 overflow-y-auto bg-[#fafafa]">
           {renderView()}
         </main>
       </div>
