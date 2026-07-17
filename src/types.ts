@@ -13,4 +13,23 @@ export interface AuditResult {
   section: string;
 }
 
-export type ActiveView = 'dashboard' | 'bom' | 'audit' | 'generator' | 'settings';
+export type ActiveView = 'dashboard' | 'bom' | 'audit' | 'generator' | 'mrp' | 'settings';
+
+export interface MRPItem {
+  id: string;
+  partNumber: string;
+  requiredQty: number;
+  onHand: number;
+  shortage: number;
+  leadTime: number; // in days
+  status: 'Critical' | 'In-Progress' | 'Scheduled';
+}
+
+export interface ProductionOrder {
+  id: string;
+  assembly: string;
+  startDate: string;
+  endDate: string;
+  status: 'Draft' | 'Confirmed' | 'Released';
+  items: MRPItem[];
+}

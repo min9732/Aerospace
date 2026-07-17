@@ -7,7 +7,8 @@ import {
   Box,
   ChevronRight,
   LogOut,
-  Plane
+  Plane,
+  Calendar
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { ActiveView } from '@/types';
@@ -22,6 +23,7 @@ const menuItems = [
   { id: 'bom', label: 'Smart BOM Converter', icon: FileSpreadsheet },
   { id: 'audit', label: 'Drawing Audit', icon: SearchCheck },
   { id: 'generator', label: 'Part Generator', icon: Box },
+  { id: 'mrp', label: 'Production Planning', icon: Calendar },
 ];
 
 export function Sidebar({ activeView, setActiveView }: SidebarProps) {

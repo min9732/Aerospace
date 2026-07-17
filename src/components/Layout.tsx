@@ -4,6 +4,7 @@ import { Dashboard } from './Dashboard';
 import { BOMConverter } from './BOMConverter';
 import { DrawingAudit } from './DrawingAudit';
 import { PartGenerator } from './PartGenerator';
+import { MRPPlanner } from './MRPPlanner';
 import { ActiveView } from '@/types';
 import { Bell, Search, User } from 'lucide-react';
 
@@ -16,6 +17,7 @@ export function Layout() {
       case 'bom': return <BOMConverter />;
       case 'audit': return <DrawingAudit />;
       case 'generator': return <PartGenerator />;
+      case 'mrp': return <MRPPlanner />;
       default: return <Dashboard />;
     }
   };
