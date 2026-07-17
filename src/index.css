@@ -1,14 +1,37 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
 @import "tailwindcss";
 
 @theme {
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  --color-primary: #0066cc;
+  --color-primary-hover: #0071e3;
+  --color-canvas-parchment: #f5f5f7;
+  --color-ink: #1d1d1f;
 }
 
 @layer base {
   body {
-    @apply font-sans text-slate-900 bg-slate-50 antialiased;
+    @apply font-sans text-[17px] text-[#1d1d1f] bg-[#F8FAFC] antialiased leading-[1.47] tracking-[-0.022em];
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold tracking-[-0.03em];
+  }
+}
+
+@layer utilities {
+  .apple-tight {
+    letter-spacing: -0.03em;
+  }
+  
+  .glass-frosted {
+    @apply bg-white/80 backdrop-blur-xl;
+  }
+
+  .button-active-scale {
+    @apply active:scale-95 transition-transform duration-200;
   }
 }
 
