@@ -1,0 +1,6 @@
+{
+  "name": "Aero-Design Intelligence Suite (ADIS)",
+  "description": "An intelligent aerospace design automation toolset for CATIA data validation, BOM conversion, and standard part generation.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
